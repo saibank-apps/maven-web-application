@@ -12,6 +12,7 @@ echo "the node name is : ${env.NODE_NAME}"
 
 //checkout code state
 stage('checkout code'){
+sendslackNotifications("STARTED")
 git branch: 'development', credentialsId: 'b6da0283-cdaa-4cf5-9337-17ec6e15e2eb', url: 'https://github.com/saibank-apps/maven-web-application.git'
 }
 
